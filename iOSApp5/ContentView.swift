@@ -1,21 +1,38 @@
-//
-//  ContentView.swift
-//  iOSApp5
-//
-//  Created by Brandon Naugler on 2026-07-09.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    
+    @StateObject private var settings = SettingsViewModel()
+    
+    var selectedBackgroundColor: Color? {
+        switch settings.backgroundColor.lowercased() {
+        case "blue":
+            return .blue
+            
+        case "green":
+            return .green
+            
+        case "red":
+            return .red
+            
+        default:
+            return nil
         }
-        .padding()
+    }
+    
+    var body: some View {
+        ZStack {
+            selectedBackgroundColor
+                .ignoresSafeArea()
+            
+            WelcomeView(backgroundColor: selectedBackgroundColor)
+        }
+        .preferredColorScheme(
+            settings.theme == "night" ? .dark : .light
+        )
+        .onAppear {
+            settings.loadSettings()
+        }
     }
 }
 

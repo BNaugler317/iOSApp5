@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DF4211CF300491DC004A51B9 /* helmet.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF4211CD300491DC004A51B9 /* helmet.mp4 */; };
+		DF4211D0300491DC004A51B9 /* pokeball.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF4211CE300491DC004A51B9 /* pokeball.mp4 */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DF3E0E592FFFC67000EDEBFC /* iOSApp5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4211CD300491DC004A51B9 /* helmet.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = helmet.mp4; sourceTree = "<group>"; };
+		DF4211CE300491DC004A51B9 /* pokeball.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokeball.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +39,7 @@
 		DF3E0E502FFFC67000EDEBFC = {
 			isa = PBXGroup;
 			children = (
+				DF3E0E722FFFF66400EDEBFC /* Media */,
 				DF3E0E5B2FFFC67000EDEBFC /* iOSApp5 */,
 				DF3E0E5A2FFFC67000EDEBFC /* Products */,
 			);
@@ -43,6 +51,15 @@
 				DF3E0E592FFFC67000EDEBFC /* iOSApp5.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DF3E0E722FFFF66400EDEBFC /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				DF4211CD300491DC004A51B9 /* helmet.mp4 */,
+				DF4211CE300491DC004A51B9 /* pokeball.mp4 */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +126,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4211CF300491DC004A51B9 /* helmet.mp4 in Resources */,
+				DF4211D0300491DC004A51B9 /* pokeball.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
